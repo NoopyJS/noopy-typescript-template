@@ -1,5 +1,4 @@
 import { Request, Response } from 'express';
-import {Swagger} from "@noopyjs/swagger";
 
 class ExampleController {
     helloWorld(req:Request, res: Response) {

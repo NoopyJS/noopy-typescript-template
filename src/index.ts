@@ -1,10 +1,6 @@
-import express from 'express';
-import ExampleController from "./controllers/example.controller.js";
+import {AppModule} from "./app.module";
+import {Noopy} from "noopy-router";
 
-const app = express();
-
-app.get('/', ExampleController.helloWorld);
-
-app.listen(4000, () => {
-    console.log('Server is running on port 4000');
-});
+const app = new Noopy(AppModule);
+app.init();
+app.listen(4000);
